@@ -148,37 +148,6 @@ Skid/Unit: [tag] | Experiment: [description] | Date: [ ] | Prepared by: Agent v[
 
 ---
 
-## Stage 2: Human HAZID Workshop
-
-### 2.1 Pre-workshop prep
-- Distribute the draft report (with confidence tags) to all participants at least 2–3 days ahead
-- Participants read and pre-mark: (a) findings they disagree with, (b) 🔴 gaps they can personally close, (c) new hazards not on the list
-- Facilitator pre-screens the "Unresolved / Requires Human Judgment" section — this becomes the workshop's core agenda, not an afterthought
-
-### 2.2 Recommended attendees
-- Process/chemical engineer (owns the chemistry)
-- Operations representative (someone who runs the actual skid)
-- Metallurgy/materials engineer (if MOC-relevant hazards are flagged)
-- Instrumentation/controls engineer (if cross-discipline findings involve I&C)
-- EHS/process safety representative
-- Named technical owner from Stage 0 (accountable sign-off role)
-
-### 2.3 Workshop procedure
-1. **Calibration** (10–15 min): Walk through how the agent generated the report — evidence tiers, four-pass method — so the team knows how to weight each finding.
-2. **Category-by-category review**: For each hazard category, confirm 🟢 findings quickly, **spend the majority of time on 🟡 and 🔴 items**, and specifically interrogate points where the four passes disagreed.
-3. **Tacit knowledge capture**: For every category, explicitly ask operations: *"Has anything like this happened that was never logged?"* This is the step that recovers what retrieval structurally cannot.
-4. **Gap closure**: Work through the Evidence Gaps Register — close what can be closed in the room, assign owners/deadlines for what can't.
-5. **New hazard capture**: Open floor for hazards the agent didn't surface at all.
-6. **Disposition of each finding**: Accept / Modify / Reject / Escalate to HAZOP-LOPA, with a named owner and date for each open item.
-7. **Sign-off**: Qualified process safety owner signs the finalized E-HAZID; document is version-locked against the source documents used.
-
-### 2.4 Output of Stage 2
-- Finalized, human-approved E-HAZID report
-- Updated Evidence Gaps Register (closed items marked, open items assigned)
-- Formal handoff package to downstream HAZOP/LOPA/MOC processes
-- Lessons file: any tacit-knowledge findings from this workshop should be considered for formal documentation, so future agent runs have better source material (this is how the system improves over time)
-
----
 
 ## Design Principle Underlying Both Stages
 
