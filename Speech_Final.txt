@@ -1,0 +1,89 @@
+Before I get into the tool itself, I want to spend thirty seconds on why this is coming up now, because it's not a hypothetical efficiency pitch — it's a direct consequence of decisions we've already made.
+We've consolidated our labs. That's reduced the number of capability units we're running — but it hasn't reduced the range of chemistry we're asked to run. So the same skid that used to serve one fairly 
+stable process now has to flex across very different chemistries, often on an ad hoc basis, on short notice.
+
+And every time that flex happens — a new chemistry, a wider operating envelope, a different catalyst — that's not a footnote. That's a fresh management-of-change cycle. Each one needs its own hazard 
+basis prepared from scratch.
+
+So here's the actual math problem: fewer capability units, each one now carrying a broader remit, means MOC frequency is going up — and our manual hazard-review bandwidth hasn't gone up with it. 
+That gap is what's actually driving this conversation. It's not that our current process is bad. It's that we've built an operating model that needs hazard-basis prep to happen faster and more often 
+than one person reading SOPs can keep pace with.
+
+That's the problem this tool is built against
+
+
+
+
+So what is this, exactly?
+
+It's a synthesis and calculation-screening agent — not a decision-maker. 
+
+How should we start ? Think about where did a competent process safety engineer starts? starting with Pulling from SOPs, PFDs, P&IDs, prior HAZOP/HAZID/RHA, design basis, and incident history before doing first-principles analysis before
+hazard brainstorm. this is what this tool starts with a Document-grounded retrieval is the foundation for this tool.
+
+You give it a short input form and point it at what's already connected: SOPs, P&IDs, prior HAZID and HAZOP work, RHAs, design data, and open literature. It reads all of that, cross-checks it, runs the calculations it can defend with public data, and produces a draft E-HAZID — hazard identification only. It doesn't touch HAZOP worksheets, it doesn't do LOPA, it doesn't judge safeguards or interlocks. And it never approves anything. That line doesn't move, no matter how good the draft looks.
+
+Now — the natural next question in this room is 'okay, so why should I trust what it hands me?' 
+
+That's fair, and it's worth answering directly rather than asking you to just take it on faith.
+
+it is very important to understand that in a risk identification value comes from disagreement, not retrieval.
+the human led multidisciplinary session arranged generally to get people who see the plant differently and to challenge each other's assumptions.
+A document-retrieval agent, however good, only knows what's written down. It cannot surface:
+Undocumented modifications or "as-operated vs. as-designed" drift
+Tacit operator knowledge (near-misses never logged, workarounds)
+Cross-system interaction hazards that no single document describes
+
+Four things. First, it runs four independent passes over the same evidence — one trusting the documents, one actively trying to break that trust, one thinking like an operator, one hunting for cross-discipline 
+blind spots — and when those passes disagree, it shows you the disagreement. It doesn't quietly pick a winner.
+
+Second, every single finding is tagged — evidenced, inferred, or gap — so a well-supported conclusion never reads the same as an educated guess. That distinction stays visible all the way through.
+
+Third, it doesn't invent numbers. If a public constant exists — a flammability limit, an exposure limit, a material standard — it uses it and cites it. If the number has to come from your specific unit 
+and that data isn't there, it says so plainly, instead of filling the gap with something plausible-sounding.
+
+And fourth — it never signs anything. Every run ends at a named human who owns the final call. This tool drafts the basis for that decision. It doesn't make the decision.
+
+so the tool is positioned as "a rigorously sourced draft that seeds a human review session," to get most of the efficiency gain.
+Build a structured "challenge sheet" instead of a narrative report where we might risk institutionalizing whatever gaps exist in the document set.
+
+------------------
+
+Here's what that actually looked like in practice. We ran this on a real proposed experiment — a naphtha reforming run. The tool read four separate documents: the SOP, a pre-change design basis, 
+an old HAZOP, and the experiment owner's own notes. They disagreed with each other on maximum temperature — 550, 540, and 680 degrees, three different numbers, sitting quietly across three 
+different documents no one had occasion to cross-read until this run was proposed.
+
+It also caught something the requester flagged themselves — a known concern about high-temperature hydrogen attack — that the first draft of the report still missed. Once corrected, the 
+tool screened it against the actual industry standard for that failure mode and confirmed it was a real, not hypothetical, risk at those conditions.
+
+Neither of those is the AI being clever. They're both things that were already true in our documents — SafetyLens just made them visible before the field did.
+
+
+
+-------------------------------------
+
+Three things this actually buys us. One — it catches document drift like the one you just saw, on a predictable schedule, every time someone proposes new work, instead of waiting for an incident to surface it. 
+Two — it applies checks like the HTHA screen consistently, every single run, because it doesn't run out of workshop time before item fourteen on the list. 
+And three — its scope is deliberately narrow. It never approves, never judges safeguards, never replaces the technical authority. That's not a limitation — it's what makes this easy to greenlight, 
+because you're trusting it with the reading, not the decision.
+
+Bottom line: don't judge this against a forty-year-old HAZOP methodology it was never trying to be. It replaces the week someone spends reading old SOPs before the workshop starts — 
+not the workshop, and not the judgment call.
+
+
+
+-------------------------------------
+
+name the failure mode where the tool is overtrusted
+
+The failure mode: "silence mistaken for clearance."
+
+The tool is disciplined about not inventing values — when it lacks data, it produces a clean, well-formatted "Gap" or "Insufficient Basis" entry instead of guessing. But that entry sits in the same document, 
+in the same professional tone, right next to thoroughly-cited "Evidenced" findings. A reviewer skimming a long, well-structured, heavily-cited report under time pressure can let the formatting authority of the 
+document stand in for actual completeness — reading "nothing flagged here" as "checked and fine" rather than "not actually assessed." The better the report looks, 
+the more this risk grows, because a polished document earns more unearned trust than a rushed human draft would.
+
+"The failure mode we're watching for is someone treating a clean-looking report as a completed safety check. A 'Gap' tag and an 'Evidenced' tag look the same at a glance — same formatting, same confidence in tone — 
+so the real risk isn't the tool being wrong, it's a reviewer not slowing down enough to notice which tag is which. We're mitigating that by requiring the workshop to explicitly walk the Gap and Inferred sections 
+before anything else, not just the findings — and by never letting the tool's output be the final artifact. 
+
